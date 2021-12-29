@@ -1,4 +1,4 @@
-#passes all test cases, not optimized - raw code
+#passes all test cases
 class Solution(object):
     def removeElement(self, nums, val):
         """
