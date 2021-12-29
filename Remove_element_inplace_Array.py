@@ -1,5 +1,4 @@
-# special cases WIP
-
+#passes all test cases, not optimized - raw code
 class Solution(object):
     def removeElement(self, nums, val):
         """
@@ -43,7 +42,7 @@ class Solution(object):
                 print("before",i)
                 #check if nums[i+1]=val and dont increment i
                 if(nums[i+1]==val):
-                    break
+                    continue
                 
                 print("after",i)
                 
@@ -63,4 +62,4 @@ class Solution(object):
         print("k",k)
         print(nums)
         
-        return
+        return k
