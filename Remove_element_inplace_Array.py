@@ -1,4 +1,4 @@
-#
+# special cases WIP
 
 class Solution(object):
     def removeElement(self, nums, val):
@@ -11,14 +11,14 @@ class Solution(object):
         j=len(nums)-1
         
         #k is total elements shifted to last
-        k=0
+        vc=0
         i=0
         
         while((i-j<=0)):
             
             #last num is val
             if(i==j and nums[i]==val):
-                k+=1
+                vc+=1
                 i+=1
                 print("--1--")
                 print(i)
@@ -36,7 +36,7 @@ class Solution(object):
                     nums[m]=nums[m+1]
                 
                 
-                k+=1
+                vc+=1
                 nums[j]=temp
                 j-=1
                 
@@ -58,8 +58,9 @@ class Solution(object):
                 print(j)
                 print("----------")
         
+        k=len(nums)-vc
         print("end of while")
-        print(k)
+        print("k",k)
         print(nums)
         
         return
