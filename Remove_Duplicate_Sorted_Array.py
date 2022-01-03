@@ -40,8 +40,12 @@ class Solution(object):
         print(arr)
         #main rearrange loop
         
+        b=0
         for a in arr:
-            nums[a]=nums[arr[a]]
+            
+            nums[b]=nums[arr[a]]
+            b+=1
+            
         
         # return k unique numbers
         k=len(arr)
