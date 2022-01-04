@@ -1,4 +1,4 @@
-#WIP
+#passes all test cases
 
 class Solution(object):
     def removeDuplicates(self, nums):
@@ -14,39 +14,45 @@ class Solution(object):
         #main loop
         i=0
         
+        #null input
+        if(len(nums)==0):
+            k=0
+            return k
+        else:
+            pass
+        
         while(i<len(nums)-1):
             
             # duplicate counter for each loop
             j=0
+            
             # duplicate counter loop
-            for m in range(i,len(nums)-i+1):
+            for m in range(i,len(nums)-1):
+                
                 if(nums[m]==nums[m+1]):
                     j+=1
-                    print("j",j)
+                    
+                    
                 else:
+                    
                     break
-            
-            
-            
-            
+                
             #move pointer to next unique
             i=i+j+1
-            print(i)
-            arr.append(i)
+            
+            
+            #if i!= last element then append
+            if(i!=len(nums)):
+                arr.append(i)
+
         
-        
-        
-        
-        print(arr)
         #main rearrange loop
-        
         b=0
         for a in arr:
             
-            nums[b]=nums[arr[a]]
+            nums[b]=nums[arr[b]]
             b+=1
-            
-        
+                    
         # return k unique numbers
         k=len(arr)
         return k
